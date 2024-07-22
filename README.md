@@ -37,3 +37,28 @@ Bienvenue dans le dépôt ERPINNOV.COM, une plateforme SaaS conçue pour simplif
 1. **Cloner le dépôt**
    ```bash
    git remote set-url origin https://github.com/gasikaradigital/erpinov.git
+   cd erpinov
+    ```
+2. Installez les dépendances :
+    ```sh
+    composer install
+    npm install
+    ```
+3. Configurez les variables d'environnement :
+    ```sh
+    cp .env.example .env
+    ```
+    Modifiez le fichier `.env` avec vos paramètres de configuration.
+
+4. Initialisez la base de données :
+    ```sh
+    php artisan migrate --seed
+    ```
+5. Démarrez l'application :
+    ```sh
+    php artisan serve
+    ```   
+## Tests
+Pour exécuter les tests unitaires et d'intégration avec Pest :
+```sh
+./vendor/bin/pest
