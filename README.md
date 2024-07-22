@@ -36,5 +36,4 @@ Bienvenue dans le dépôt ERPINNOV.COM, une plateforme SaaS conçue pour simplif
 ### Étapes
 1. **Cloner le dépôt**
    ```bash
-   git clone https://github.com/votreutilisateur/erpinov.com.git
-   cd erpinov.com
+   git remote set-url origin https://github.com/gasikaradigital/erpinov.git
