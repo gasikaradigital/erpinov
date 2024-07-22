@@ -22,7 +22,7 @@ Bienvenue dans le dépôt ERPINNOV.COM, une plateforme SaaS conçue pour simplif
 - **Intégrations** : API pour services tiers comme le paiement en ligne et la logistique.
 
 ## Technologies
-- **Frameworks & Langages** : Laravel, Node.js, PHP 8.1+
+- **Frameworks & Langages** : Laravel, Node.js, React, PHP 8.1+
 - **Bases de données** : MariaDB, avec utilisation potentielle de MongoDB
 - **Hébergement** : AWS, avec plans de sauvegarde et de reprise après sinistre, déploiement initial sur O2Switch
 
