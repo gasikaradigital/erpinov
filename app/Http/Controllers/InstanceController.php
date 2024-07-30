@@ -39,8 +39,10 @@ use App\Services\InstanceProvisioningService;
         if ($request->user()->id !== $instance->user_id) {
             abort(403, 'Non autorisé');
         }
-
-        return redirect($instance->url . '/index.php');
+        //return redirect($instance->url . '/index.php');
+        
+        //Test redirection vers compte DoliCloud
+        return redirect()->away('https://rakotonirina.with7.dolicloud.com');
     }
 
     public function destroy(Instance $instance)
