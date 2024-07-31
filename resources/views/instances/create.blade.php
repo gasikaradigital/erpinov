@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<x-app-layout>
 
 @section('title', 'Créer une Instance')
 
@@ -31,4 +31,4 @@
         </div>
     </div>
 </div>
-@endsection
+</x-app-layout>

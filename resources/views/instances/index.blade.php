@@ -1,6 +1,6 @@
 <!-- views/instances/index.blade.php -->
 
-@extends('layouts.app')
+<x-app-layout>
 
 @section('title', 'Mes Instances')
 
@@ -49,4 +49,4 @@
         @endforelse
     </tbody>
 </table>
-@endsection
+</x-app-layout>

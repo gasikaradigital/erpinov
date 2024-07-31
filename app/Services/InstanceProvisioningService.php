@@ -28,12 +28,16 @@ class InstanceProvisioningService
         // Créer la base de données
         $dbName = $this->createDatabase($serverIp);
 
+        // Générer un mot de passe sécurisé pour Dolibarr
+        $dolibarrPassword = Str::random(16);
+
         // Créer l'instance dans la base de données
         $instance = Instance::create([
             'user_id' => $user->id,
-            'url' => "https://{$subdomain}.erpnov.mg",
+            'url' => "https://{$subdomain}.gasikara.mg",
             'status' => 'active',
             'db_name' => $dbName,
+            'dolibarr_password' => $dolibarrPassword, // Stockez le mot de passe de manière sécurisée
         ]);
 
         // Déclencher l'événement de création d'instance
@@ -54,7 +58,7 @@ class InstanceProvisioningService
         $subdomain = $base;
         $i = 1;
 
-        while (Instance::where('url', "https://{$subdomain}.erpnov.mg")->exists()) {
+        while (Instance::where('url', "https://{$subdomain}.gasikara.mg")->exists()) {
             $subdomain = $base . $i;
             $i++;
         }
