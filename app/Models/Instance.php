@@ -9,7 +9,6 @@ class Instance extends Model
 {
     use HasFactory;
 
-    // protected $fillable = ['user_id', 'url', 'status', 'db_name'];
     protected $fillable = ['user_id', 'url', 'status', 'db_name', 'auth_token', 'token_expires_at', 'dolibarr_password'];
 
     protected $hidden = ['auth_token', 'dolibarr_password'];

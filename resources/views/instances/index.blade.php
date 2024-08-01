@@ -7,11 +7,15 @@
 @section('content')
 <h1>Mes Instances Dolibarr</h1>
 
-@if (session('success'))
-<div class="alert alert-success">
-    {{ session('success') }}
-</div>
-@endif
+    @if(session('success'))
+        <div class="alert alert-success">
+        {{ session('success') }}
+        @if(session('dolibarrPassword'))
+        <br>
+        Votre mot de passe Dolibarr est: <strong>{{ session('dolibarrPassword') }}</strong>
+        @endif
+    </div>
+    @endif
 
 <a href="{{ route('instances.create') }}" class="mb-3 btn btn-primary">Créer une nouvelle instance</a>
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstanceController;
+use App\Http\Controllers\Api\DolibarrController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,10 +24,10 @@ Route::middleware([
     Route::get('/instances/create', [InstanceController::class, 'create'])->name('instances.create');
     Route::post('/instances', [InstanceController::class, 'store'])->name('instances.store');
     Route::get('/instances/{instance}/redirect', [InstanceController::class, 'redirect'])->name('instances.redirect');
-
-    Route::get('/instances/{instance}/edit', [InstanceController::class, 'edit'])->name('edit.instance');
-
     Route::delete('/instances/{instance}', [InstanceController::class, 'destroy'])->name('instances.destroy');
+
+    // Route pour la connexion Dolibarr
+    Route::post('/dolibarr/login', [DolibarrController::class, 'login'])->name('dolibarr.login');
 
 
 });
