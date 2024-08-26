@@ -19,7 +19,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    // Routes pour les instances
+    // Routes pour les instances 
     Route::get('/instances', [InstanceController::class, 'index'])->name('instances.index');
     Route::get('/instances/create', [InstanceController::class, 'create'])->name('instances.create');
     Route::post('/instances', [InstanceController::class, 'store'])->name('instances.store');
