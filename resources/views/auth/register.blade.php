@@ -8,6 +8,16 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
+            {{-- <a href="{{ url('/') }}">Retour a la page d'accueil</a> |
+            <a href="{{ route('login') }}">Se connecter</a> --}}
+
+            <a href="{{ url('/') }}" class="inline-flex items-center px-4 py-2 bg-blue-500 border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:border-blue-700 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
+                Retour à l'accueil
+            </a>
+            |
+            <a href="{{ route('login') }}" class="inline-flex items-center px-4 py-2 bg-green-500 border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-green-600 active:bg-green-700 focus:outline-none focus:border-green-700 focus:ring ring-green-300 disabled:opacity-25 transition ease-in-out duration-150">
+                Se connecter
+            </a>
 
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />

@@ -15,6 +15,15 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
+            <a href="{{ url('/') }}" class="inline-flex items-center px-4 py-2 bg-blue-500 border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:border-blue-700 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
+                Retour à l'accueil
+            </a>
+            |
+            <a href="{{ route('register') }}" class="inline-flex items-center px-4 py-2 bg-green-500 border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-green-600 active:bg-green-700 focus:outline-none focus:border-green-700 focus:ring ring-green-300 disabled:opacity-25 transition ease-in-out duration-150">
+                Créer un compte
+            </a>
+
+
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
@@ -42,6 +51,7 @@
                 <x-button class="ms-4">
                     {{ __('Log in') }}
                 </x-button>
+
             </div>
         </form>
     </x-authentication-card>

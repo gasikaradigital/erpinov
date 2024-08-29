@@ -8,6 +8,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/tarif', function () {
+    return view('tarif');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::get('/instances/{instance}/login/{token}', [InstanceController::class, 'login'])->name('instances.login');
 
 Route::middleware([
@@ -19,7 +35,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    // Routes pour les instances 
+    // Routes pour les instances
     Route::get('/instances', [InstanceController::class, 'index'])->name('instances.index');
     Route::get('/instances/create', [InstanceController::class, 'create'])->name('instances.create');
     Route::post('/instances', [InstanceController::class, 'store'])->name('instances.store');
