@@ -1,7 +1,7 @@
 <?php
-    return [
+return [
 
-    'paths' => ['api/*'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 
@@ -17,4 +17,4 @@
 
     'supports_credentials' => false,
 
-    ];
+];
